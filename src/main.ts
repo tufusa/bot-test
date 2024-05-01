@@ -18,11 +18,13 @@ client.once("ready", () => {
 });
 
 client.on("messageCreate", async (message: Message) => {
-  console.log({ message });
   if (message.author.bot) return;
 
   if (message.content === "!ping") {
     message.channel.send("pong.");
+  }
+  if (message.content === "!time") {
+    message.channel.send(new Date().toLocaleString());
   }
 });
 
