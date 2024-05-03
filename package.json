@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.1.1",
+    "@types/node-cron": "^3.0.11",
     "eslint": "^9.1.1",
     "globals": "^15.1.0",
     "ts-node": "^10.9.2",
@@ -22,6 +23,7 @@
   "dependencies": {
     "discord.js": "^14.14.1",
     "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3",
     "prettier": "^3.2.5"
   }
 }
