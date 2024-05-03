@@ -33,6 +33,13 @@ client.on("messageCreate", async (message: Message) => {
   if (message.content === "!time") {
     message.channel.send(new Date().toLocaleString());
   }
+  if (message.content.startsWith("!nick")) {
+    const matches = message.content.match(/^!nick (?<nickname>.+)$/);
+    const nickname = matches?.groups?.nickname;
+    if (!nickname || nickname.length === 0) return;
+
+    message.guild?.members.me?.setNickname(nickname);
+  }
 });
 
 client.login(process.env.TOKEN);
