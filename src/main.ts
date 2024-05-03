@@ -2,7 +2,7 @@ import { GatewayIntentBits, Client, Message } from "discord.js";
 import dotenv from "dotenv";
 import cron from "node-cron";
 
-dotenv.config();
+dotenv.config({ path: [".env.local", ".env"] });
 
 const client = new Client({
   intents: [
