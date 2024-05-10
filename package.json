@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/main.ts",
-    "start": "node build/main.js",
-    "build": "tsc -p ."
+    "dev": "bun run src/main.ts",
+    "start": "bun run build/main.js",
+    "build": "bun build src/main.ts --outdir build --target bun"
   },
   "keywords": [],
   "author": "",
@@ -15,15 +15,13 @@
     "@eslint/js": "^9.1.1",
     "@types/node-cron": "^3.0.11",
     "eslint": "^9.1.1",
-    "globals": "^15.1.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.5",
-    "typescript-eslint": "^7.8.0"
+    "globals": "^15.1.0"
   },
   "dependencies": {
     "discord.js": "^14.14.1",
     "dotenv": "^16.4.5",
     "node-cron": "^3.0.3",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "typescript-eslint": "^7.8.0"
   }
 }
